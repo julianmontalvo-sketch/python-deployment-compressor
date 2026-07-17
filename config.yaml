@@ -1,0 +1,35 @@
+github:
+  owner: your-github-user
+  repository: python-deployment-compressor
+  check_updates: true
+
+compression:
+  remove_comments: true
+  remove_docstrings: false
+  trim_trailing_whitespace: true
+  collapse_blank_lines: true
+
+sandbox:
+  enabled: true
+
+output:
+  build_directory: .build
+  zip_name: deployment.zip
+  report_name: compression-report.json
+
+ignore:
+  directories:
+    - .git
+    - .idea
+    - .vscode
+    - __pycache__
+    - tests
+    - docs
+    - node_modules
+    - .pytest_cache
+
+  extensions:
+    - .pyc
+
+  filenames:
+    - .DS_Store
